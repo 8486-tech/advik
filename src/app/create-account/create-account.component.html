@@ -1,0 +1,58 @@
+<div class="row-layout reg-container">
+  <form class="column-layout reg-form">
+    <div class="column-layout reg-header">
+      <h4 class="content">
+        REGISTER NEW CLUB MANAGER
+      </h4>
+      <h6 class="content">
+        Register a personal account to lock in your squad stats.
+      </h6>
+    </div>
+    <div class="column-layout reg-inputs">
+      <igx-input-group type="border" class="reg-fullname">
+        <input type="text" [(ngModel)]="value" placeholder="UltimateManager99" required="true" igxInput #igxInput />
+        <label igxLabel>Manager Profile Name</label>
+        @if (igxInput.validity.valueMissing) {
+          <igx-hint>This field is required</igx-hint>
+        }
+      </igx-input-group>
+      <igx-input-group type="border" class="reg-fullname">
+        <input type="email" [(ngModel)]="value1" placeholder="manager@fc.com" required="true" igxInput #igxInput1 />
+        <label igxLabel>Email Address</label>
+        @if (igxInput1.validity.valueMissing) {
+          <igx-hint>This field is required</igx-hint>
+        }
+      </igx-input-group>
+      <igx-input-group type="border" class="reg-fullname">
+        <input type="password" [(ngModel)]="value2" placeholder="••••••••" required="true" igxInput #igxInput2 />
+        <label igxLabel>Secure Password</label>
+        @if (igxInput2.validity.valueMissing) {
+          <igx-hint>This field is required</igx-hint>
+        }
+      </igx-input-group>
+      <igx-input-group type="border" class="reg-fullname">
+        <input type="password" [(ngModel)]="value3" placeholder="••••••••" required="true" igxInput #igxInput3 />
+        <label igxLabel>Confirm Password</label>
+        @if (igxInput3.validity.valueMissing) {
+          <igx-hint>This field is required</igx-hint>
+        }
+      </igx-input-group>
+      <div class="row-layout reg-consent">
+        <igx-checkbox labelPosition="after" required="true" [(ngModel)]="checked" class="reg-check">
+          I accept EA Sports FC Companion Terms &amp; Privacy policy
+        </igx-checkbox>
+      </div>
+      <button igxButton="contained" type="button" class="reg-submit">
+        Initialize My Club
+      </button>
+    </div>
+    <div class="row-layout reg-footer">
+      <p class="ig-typography__body-2 content">
+        Already have a registered club?
+      </p>
+      <a class="ig-typography__body-2 reg-login-link">
+        Sign In
+      </a>
+    </div>
+  </form>
+</div>

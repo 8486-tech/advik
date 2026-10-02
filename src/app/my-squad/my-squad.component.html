@@ -1,0 +1,80 @@
+<div class="row-layout squad-header-row">
+  <div class="column-layout squad-title-block">
+    <h3 class="content">
+      MY ACTIVE SQUAD
+    </h3>
+    <p class="content">
+      Review your playing XI, overall team chemistry links and primary player ratings.
+    </p>
+  </div>
+  <igx-chip class="squad-chem-badge">
+    <igx-prefix>
+      <igx-icon class="icon-yi-7aic">
+        bolt
+      </igx-icon>
+    </igx-prefix>
+    Total Team Chemistry: 100
+  </igx-chip>
+</div>
+<div class="row-layout squad-players-grid-row">
+  <igx-card class="player-card-item">
+    <igx-card-header>
+      <h3 igxCardHeaderTitle>
+        &#123;&#123;name&#125;&#125;
+      </h3>
+      <h5 igxCardHeaderSubtitle>
+        &#123;&#123;position&#125;&#125;
+      </h5>
+    </igx-card-header>
+    <igx-card-content>
+      <div class="column-layout squad-title-block">
+        <div class="row-layout player-rating-row">
+          <p class="content">
+            OVR Rating:
+          </p>
+          <h5 class="player-rating-val">
+            &#123;&#123;rating&#125;&#125;
+          </h5>
+        </div>
+        <div class="row-layout player-rating-row">
+          <p class="content">
+            Club / League:
+          </p>
+          <p class="ig-typography__body-2 content">
+            &#123;&#123;club&#125;&#125;
+          </p>
+        </div>
+        <div class="row-layout player-rating-row">
+          <p class="content">
+            Individual Chem:
+          </p>
+          <div class="row-layout player-chem-val-wrap">
+            <igx-icon class="icon-yi-7aic">
+              bolt
+            </igx-icon>
+            <p class="player-chem-val">
+              &#123;&#123;chemistryVal&#125;&#125;
+            </p>
+          </div>
+        </div>
+      </div>
+    </igx-card-content>
+    <igx-card-actions>
+      <ng-container igxStart>
+        <button igxButton="flat" type="button" class="player-swap">
+          <igx-icon>
+            swap_horiz
+          </igx-icon>
+          <span>Swap</span>
+        </button>
+        <button igxButton="flat" type="button" class="player-train">
+          <igx-icon class="icon">
+            trending_up
+          </igx-icon>
+          <span>Train</span>
+        </button>
+      </ng-container>
+      <ng-container igxEnd></ng-container>
+    </igx-card-actions>
+  </igx-card>
+</div>

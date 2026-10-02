@@ -1,0 +1,47 @@
+<div class="row-layout login-container">
+  <form class="column-layout login-form">
+    <div class="column-layout login-header">
+      <h4 class="content">
+        ACCESS SQUAD ACCOUNT
+      </h4>
+      <h6 class="content">
+        Enter your registered manager credentials to log in.
+      </h6>
+    </div>
+    <div class="column-layout login-inputs">
+      <igx-input-group type="border" class="login-email">
+        <input type="email" [(ngModel)]="value" placeholder="manager@fc.com" required="true" igxInput #igxInput />
+        <label igxLabel>Manager Email Address</label>
+        @if (igxInput.validity.valueMissing) {
+          <igx-hint>This field is required</igx-hint>
+        }
+      </igx-input-group>
+      <igx-input-group type="border" class="login-email">
+        <input type="password" [(ngModel)]="value1" placeholder="••••••••" required="true" igxInput #igxInput1 />
+        <label igxLabel>Secure Password</label>
+        @if (igxInput1.validity.valueMissing) {
+          <igx-hint>This field is required</igx-hint>
+        }
+      </igx-input-group>
+      <div class="row-layout login-form-helpers">
+        <igx-checkbox labelPosition="after" [(ngModel)]="checked" class="login-remember">
+          Remember my club info
+        </igx-checkbox>
+        <a href="#" class="ig-typography__body-2 login-forgot">
+          Forgot Password?
+        </a>
+      </div>
+      <button igxButton="contained" type="button" class="login-submit">
+        Open Dashboard
+      </button>
+    </div>
+    <div class="row-layout login-footer">
+      <p class="ig-typography__body-2 content">
+        Need a manager account?
+      </p>
+      <a class="ig-typography__body-2 login-register-link">
+        Create Account
+      </a>
+    </div>
+  </form>
+</div>
