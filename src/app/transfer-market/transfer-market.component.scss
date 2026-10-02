@@ -1,0 +1,79 @@
+:host {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 16px;
+}
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
+.market-header-layout {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 8px 0;
+  position: relative;
+  padding: 24px 32px 16px;
+  min-width: 50px;
+  min-height: 50px;
+  flex-shrink: 0;
+}
+.row-layout {
+  display: flex;
+}
+.market-filters-row {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  gap: 0 16px;
+  position: relative;
+  padding: 0 32px;
+  min-width: 50px;
+  min-height: 50px;
+  flex-shrink: 0;
+}
+.market-grid-row {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  padding: 16px 32px 32px;
+  min-width: 50px;
+  min-height: 50px;
+  flex-shrink: 0;
+}
+.content {
+  height: max-content;
+  min-width: min-content;
+}
+.icon-3owf-0v {
+  --size: 18px;
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+}
+.market-search {
+  min-width: 280px;
+  flex-shrink: 0;
+}
+.market-pos-select {
+  min-width: 180px;
+  flex-shrink: 0;
+}
+.market-filter-btn {
+  --ig-size: var(--ig-size-medium);
+  height: max-content;
+  flex-shrink: 0;
+}
+.market-grid {
+  --ig-size: var(--ig-size-medium);
+  min-width: 600px;
+  min-height: 300px;
+  flex-grow: 1;
+  flex-basis: 0;
+}

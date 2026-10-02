@@ -1,0 +1,211 @@
+<div class="row-layout dash-padded-container">
+  <div class="column-layout dash-central-layout">
+    <div class="column-layout dash-welcome-header">
+      <h3 class="content">
+        ULTIMATE CLUB DASHBOARD
+      </h3>
+      <p class="content">
+        Welcome back, UltimateManager99. Check your active squad efficiency and market parameters below.
+      </p>
+    </div>
+    <div class="row-layout dash-metrics-row">
+      <igx-card class="metric-ovr">
+        <igx-card-header>
+          <div igxCardThumbnail>
+            <igx-avatar shape="circle" class="metric-ovr-avatar metric-ovr-avatar_1">
+              <igx-icon class="icon">
+                star
+              </igx-icon>
+            </igx-avatar>
+          </div>
+          <h3 igxCardHeaderTitle>
+            SQUAD RATING
+          </h3>
+          <h5 igxCardHeaderSubtitle>
+            Subtitle goes here...
+          </h5>
+        </igx-card-header>
+        <igx-card-content>
+          <div class="column-layout metric-ovr-body">
+            <h3 class="content">
+              124 OVR
+            </h3>
+            <div class="row-layout ovr-growth">
+              <p class="ig-typography__subtitle-2 ovr-rate-text">
+                +2 OVR
+              </p>
+              <p class="ig-typography__body-2 content">
+                this week
+              </p>
+            </div>
+          </div>
+        </igx-card-content>
+      </igx-card>
+      <igx-card class="metric-ovr">
+        <igx-card-header>
+          <div igxCardThumbnail>
+            <igx-avatar shape="circle" class="metric-chem-avatar metric-chem-avatar_1">
+              <igx-icon class="icon_1">
+                bolt
+              </igx-icon>
+            </igx-avatar>
+          </div>
+          <h3 igxCardHeaderTitle>
+            TEAM CHEMISTRY
+          </h3>
+          <h5 igxCardHeaderSubtitle>
+            Subtitle goes here...
+          </h5>
+        </igx-card-header>
+        <igx-card-content>
+          <div class="column-layout metric-ovr-body">
+            <h3 class="content">
+              100 CHEM
+            </h3>
+            <div class="row-layout ovr-growth">
+              <p class="ig-typography__subtitle-2 ovr-rate-text">
+                MAX
+              </p>
+              <p class="ig-typography__body-2 content">
+                chemistry reached
+              </p>
+            </div>
+          </div>
+        </igx-card-content>
+      </igx-card>
+      <igx-card class="metric-ovr">
+        <igx-card-header>
+          <div igxCardThumbnail>
+            <igx-avatar shape="circle" class="metric-val-avatar metric-val-avatar_1">
+              <igx-icon class="icon_2">
+                monetization_on
+              </igx-icon>
+            </igx-avatar>
+          </div>
+          <h3 igxCardHeaderTitle>
+            CLUB VALUE
+          </h3>
+          <h5 igxCardHeaderSubtitle>
+            Subtitle goes here...
+          </h5>
+        </igx-card-header>
+        <igx-card-content>
+          <div class="column-layout metric-ovr-body">
+            <h3 class="content">
+              420.5M Coins
+            </h3>
+            <div class="row-layout ovr-growth">
+              <p class="ig-typography__subtitle-2 ovr-rate-text">
+                +12%
+              </p>
+              <p class="ig-typography__body-2 content">
+                vs yesterday
+              </p>
+            </div>
+          </div>
+        </igx-card-content>
+      </igx-card>
+      <igx-card class="metric-ovr">
+        <igx-card-header>
+          <div igxCardThumbnail>
+            <igx-avatar shape="circle" class="metric-points-avatar metric-points-avatar_1">
+              <igx-icon class="icon_3">
+                account_balance_wallet
+              </igx-icon>
+            </igx-avatar>
+          </div>
+          <h3 igxCardHeaderTitle>
+            STORE POINTS
+          </h3>
+          <h5 igxCardHeaderSubtitle>
+            Subtitle goes here...
+          </h5>
+        </igx-card-header>
+        <igx-card-content>
+          <div class="column-layout metric-ovr-body">
+            <h3 class="content">
+              12,500 FP
+            </h3>
+            <div class="row-layout ovr-growth">
+              <p class="ig-typography__subtitle-2 ovr-rate-text">
+                ACTIVE
+              </p>
+              <p class="ig-typography__body-2 content">
+                loaded from account
+              </p>
+            </div>
+          </div>
+        </igx-card-content>
+      </igx-card>
+    </div>
+    <div class="row-layout dash-stats-row">
+      <div class="column-layout dash-left-column">
+        <div class="row-layout dash-charts-row">
+          <div class="column-layout match-performance-section">
+            <div class="column-layout chart-header">
+              <h5 class="content">
+                Division Rivals performance
+              </h5>
+              <p class="ig-typography__body-2 content">
+                Recent daily wins &amp; goals records
+              </p>
+            </div>
+            <igx-category-chart [dataSource]="financialBoxOfficeRevenue" chartType="column" chartTitle="Daily Wins & Goals" xAxisTitle="Day of Week" yAxisTitle="Records" computedPlotAreaMarginMode="series" class="match-perf-chart"></igx-category-chart>
+          </div>
+        </div>
+        <div class="column-layout market-feed-section">
+          <div class="column-layout chart-header">
+            <h5 class="content">
+              Recent Club matches
+            </h5>
+            <p class="ig-typography__body-2 content">
+              Detailed stats from your last 5 matches
+            </p>
+          </div>
+          <igc-grid-lite [data]="northwindEmployees" class="dashboard-matches-grid">
+            <igc-grid-lite-column field="opponent" header="Opponent Team" [filterable]="true" [sortable]="true"></igc-grid-lite-column>
+            <igc-grid-lite-column field="result" header="Match Result" [filterable]="true" [sortable]="true"></igc-grid-lite-column>
+            <igc-grid-lite-column field="score" header="Scoreline" [filterable]="true" [sortable]="true"></igc-grid-lite-column>
+            <igc-grid-lite-column field="coinsEarned" header="Coins Earned" [filterable]="true" [sortable]="true"></igc-grid-lite-column>
+          </igc-grid-lite>
+        </div>
+      </div>
+      <div class="column-layout dash-right-column">
+        <div class="column-layout list-news-section">
+          <div class="column-layout chart-header">
+            <h5 class="content">
+              Active Live Events
+            </h5>
+            <p class="ig-typography__body-2 content">
+              Complete current events to secure high rating players
+            </p>
+          </div>
+          <igx-list class="events-list">
+            <igx-list-item [selected]="this.eventsListSelectedItem != null && this.eventsListSelectedItem === '0'" (click)="eventsListSelectedItem = '0'">
+              <span igxListThumbnail>
+                <igx-avatar shape="circle" class="event-avatar-1 event-avatar-1_1">
+                  <igx-icon class="icon_4">
+                    emoji_events
+                  </igx-icon>
+                </igx-avatar>
+              </span>
+              <span igxListLineTitle>Team of the Year Challenges</span>
+              <span igxListLineSubTitle>Ends in 2 days</span>
+            </igx-list-item>
+            <igx-list-item [selected]="this.eventsListSelectedItem != null && this.eventsListSelectedItem === '1'" (click)="eventsListSelectedItem = '1'">
+              <span igxListThumbnail>
+                <igx-avatar shape="circle" class="event-avatar-1 event-avatar-1_2">
+                  <igx-icon class="icon_4">
+                    sports_esports
+                  </igx-icon>
+                </igx-avatar>
+              </span>
+              <span igxListLineTitle>Daily Division Rivals Grinds</span>
+              <span igxListLineSubTitle>Ends in 5 days</span>
+            </igx-list-item>
+          </igx-list>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

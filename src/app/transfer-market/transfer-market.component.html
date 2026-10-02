@@ -1,0 +1,50 @@
+<div class="column-layout market-header-layout">
+  <h3 class="content">
+    LIVE TRANSFER MARKET
+  </h3>
+  <p class="content">
+    List your squad players or buy high-rated elite cards directly using your Club Coins.
+  </p>
+</div>
+<div class="row-layout market-filters-row">
+  <igx-input-group type="border" class="market-search">
+    <igx-prefix>
+      <igx-icon class="icon-3owf-0v">
+        search
+      </igx-icon>
+    </igx-prefix>
+    <input type="text" [(ngModel)]="value" placeholder="e.g. Messi, Mbappe..." igxInput />
+    <label igxLabel>Search Player Name</label>
+  </igx-input-group>
+  <igx-select type="border" placeholder="All Positions" class="market-pos-select">
+    <igx-select-item value="1">
+      Forward (ST/LW/RW)
+    </igx-select-item>
+    <igx-select-item value="2">
+      Midfielder (CAM/CM/CDM)
+    </igx-select-item>
+    <igx-select-item value="3">
+      Defender (CB/LB/RB)
+    </igx-select-item>
+    <igx-select-item value="4">
+      Goalkeeper (GK)
+    </igx-select-item>
+    <label igxLabel>Filter Position</label>
+  </igx-select>
+  <button igxButton="contained" type="button" class="market-filter-btn">
+    <igx-icon>
+      tune
+    </igx-icon>
+    <span>Apply Search</span>
+  </button>
+</div>
+<div class="row-layout market-grid-row">
+  <igx-grid [data]="northwindEmployees" primaryKey="employeeID" [allowFiltering]="true" filterMode="excelStyleFilter" class="market-grid">
+    <igx-column field="player" header="Footballer Name" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+    <igx-column field="ovr" header="OVR Rating" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+    <igx-column field="position" header="Primary Position" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+    <igx-column field="currentBid" header="Current Bid (Coins)" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+    <igx-column field="buyNowValue" header="Buy Now Price (Coins)" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+    <igx-column field="durationRemaining" header="Auction Ends" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+  </igx-grid>
+</div>
